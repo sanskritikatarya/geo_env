@@ -14,4 +14,4 @@ pdb.set_trace() #breakpoint
 plt.imshow(DEM)
 cbar = plt.colorbar()
 cbar.set_label('Elevation (m asl)')
-plt.show()
+plt.savefig('assignment_1.png', dpi=300) 
