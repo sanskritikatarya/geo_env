@@ -1,15 +1,16 @@
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import pdb
 import xarray as xr
-dset = xr.open_dataset(r"Course_data/SRTMGL1_NC.003_Data/N21E039.SRTMGL1_NC.nc")
+dset = xr.open_dataset(r"C:\Users\sansk\Course_Data\SRTMGL1_NC.003_Data\N21E039.SRTMGL1_NC.nc")
 pdb.set_trace() #breakpoint
 
+print(dset.variables.keys())
 DEM = np.array(dset.variables['SRTMGL1_DEM'])
 dset.close()
 pdb.set_trace() #breakpoint
+
 #display DEM
 plt.imshow(DEM)
 cbar = plt.colorbar()
